@@ -1,4 +1,5 @@
 import pandas as pd
+from src.services import cashback_analysis
 
 from src.views import greetings_on_time
 
@@ -23,3 +24,10 @@ if __name__ == "__main__":
     # Передает эту дату в функцию
     result = greetings_on_time(file_date)
     print(result)
+
+    cashback_result = cashback_analysis(
+        file_path="../data/operations.xlsx",
+        year=2019,
+        month=4
+    )
+    print(cashback_result)
