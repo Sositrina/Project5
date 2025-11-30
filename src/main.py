@@ -1,6 +1,6 @@
 import pandas as pd
 from src.services import cashback_analysis
-
+from src.reports import spending_by_category
 from src.views import greetings_on_time
 
 
@@ -31,3 +31,8 @@ if __name__ == "__main__":
         month=4
     )
     print(cashback_result)
+
+    df = pd.read_excel("../data/operations.xlsx")
+    spending_result = spending_by_category(df, "Супермаркеты", "31.12.2021")
+    print(spending_result)
+
