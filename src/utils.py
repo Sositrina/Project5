@@ -1,13 +1,13 @@
 import datetime
 import json
 import logging
+import os
 from typing import Any, Dict, List
 
 import pandas as pd
 import requests
-from pandas import DataFrame
 from dotenv import load_dotenv
-import os
+from pandas import DataFrame
 
 load_dotenv()
 
